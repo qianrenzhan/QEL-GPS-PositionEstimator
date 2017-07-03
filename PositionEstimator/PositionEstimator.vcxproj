@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4EBA7948-0C7D-4D11-B0AC-6EFC4E10334C}</ProjectGuid>
+    <RootNamespace>PositionEstimator</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="geo\geo.h" />
+    <ClInclude Include="gyro\Com.h" />
+    <ClInclude Include="gyro\JY901.h" />
+    <ClInclude Include="gyro\stdafx.h" />
+    <ClInclude Include="LocalPositionEstimator\BlockLocalPositionEstimator.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="mathlib\mathlib.h" />
+    <ClInclude Include="mathlib\math\Expo.hpp" />
+    <ClInclude Include="mathlib\math\filter\LowPassFilter2p.hpp" />
+    <ClInclude Include="mathlib\math\Limits.hpp" />
+    <ClInclude Include="mathlib\math\Matrix.hpp" />
+    <ClInclude Include="mathlib\math\matrix_alg.h" />
+    <ClInclude Include="mathlib\math\Quaternion.hpp" />
+    <ClInclude Include="mathlib\math\Vector.hpp" />
+    <ClInclude Include="matrix\AxisAngle.hpp" />
+    <ClInclude Include="matrix\Dcm.hpp" />
+    <ClInclude Include="matrix\Euler.hpp" />
+    <ClInclude Include="matrix\filter.hpp" />
+    <ClInclude Include="matrix\helper_functions.hpp" />
+    <ClInclude Include="matrix\integration.hpp" />
+    <ClInclude Include="matrix\math.hpp" />
+    <ClInclude Include="matrix\Matrix.hpp" />
+    <ClInclude Include="matrix\Quaternion.hpp" />
+    <ClInclude Include="matrix\Scalar.hpp" />
+    <ClInclude Include="matrix\SquareMatrix.hpp" />
+    <ClInclude Include="matrix\test_macros.hpp" />
+    <ClInclude Include="matrix\Vector.hpp" />
+    <ClInclude Include="matrix\Vector2.hpp" />
+    <ClInclude Include="matrix\Vector3.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="geo\geo.cpp" />
+    <ClCompile Include="gyro\Com.cpp" />
+    <ClCompile Include="gyro\JY901.cpp" />
+    <ClCompile Include="gyro\stdafx.cpp" />
+    <ClCompile Include="LocalPositionEstimator\BlockLocalPositionEstimator.cpp" />
+    <ClCompile Include="LocalPositionEstimator\sensors\baro.cpp" />
+    <ClCompile Include="LocalPositionEstimator\sensors\gps.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mathlib\math\filter\LowPassFilter2p.cpp" />
+    <ClCompile Include="mathlib\math\Limits.cpp" />
+    <ClCompile Include="mathlib\math\matrix_alg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="example.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

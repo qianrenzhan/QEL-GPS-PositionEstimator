@@ -1,0 +1,134 @@
+//#include <thread> 
+//#include <windows.h> 
+//#include <time.h>
+//#include <mutex> 
+//
+//using namespace std;
+//
+//HANDLE hTimer = NULL;
+//LARGE_INTEGER liDueTime;
+//
+//mutex mu;  //线程互斥对象  
+//
+//int totalNum = 0;
+
+void thread01()
+{
+	while (totalNum > 0)
+	{
+		mu.lock(); //同步数据锁  
+		cout << totalNum << endl;
+		totalNum++;
+		Sleep(100);
+		mu.unlock();  //解除锁定  
+	}
+}
+void thread02()
+{
+	while (totalNum > 0)
+	{
+		mu.lock();
+		cout << totalNum << endl;
+		totalNum++;
+		Sleep(100);
+		mu.unlock();
+	}
+}
+
+void thread03()
+{
+	while (1)
+	{
+		if (WaitForSingleObject(hTimer, INFINITE) != WAIT_OBJECT_0)
+		{
+			printf("1秒定时器出错了\r\n");
+		}
+		else
+		{
+			time_t rawtime;
+			time(&rawtime);
+			liDueTime.QuadPart = -10000000;     //1s                -5000000代表0.5s。
+			SetWaitableTimer(hTimer, &liDueTime, 0, NULL, NULL, 0);
+			totalNum++;
+			cout << totalNum << endl;
+			cout << ctime(&rawtime) << endl;
+		}
+	}
+}
+
+//void main()
+//{
+//	AttitudeEstimatorQ attitude;
+//	attitude.running();
+//
+//	//BlockLocalPositionEstimator position;
+//	//position.update();
+//
+//	int x;
+//	cin >> x;
+//}
+
+
+//int main()
+//{
+//	HANDLE hcom;
+//	hcom = CreateFile("COM1", GENERIC_READ | GENERIC_WRITE, 0, NULL, OPEN_EXISTING
+//		, FILE_ATTRIBUTE_NORMAL, NULL);
+//	if (hcom == INVALID_HANDLE_VALUE)
+//	{
+//		fprintf(stderr, "打开串口失败！\n");
+//		exit(0);
+//	}
+//	SetupComm(hcom, 1024, 1024);
+//	DCB dcb;
+//	GetCommState(hcom, &dcb);
+//	dcb.BaudRate = 115200;
+//	dcb.ByteSize = 8;
+//	dcb.Parity = 0;
+//	dcb.StopBits = 1;
+//	SetCommState(hcom, &dcb);
+//	char data[] = { 0xA5, 0x00, 0x01, 0x00, 0x10, 0x01, 0x00, 0xAA };
+//	DWORD dwWrittenLen = 0;
+//	int k = 0;
+//	for (;;) 
+//	{
+//		if (!WriteFile(hcom, data, 8, &dwWrittenLen, NULL))
+//		{
+//			fprintf(stderr, "发送数据失败！\n");
+//		}
+//
+//		k++;
+//
+//		printf("往串口发送数据成功！第%d次\n", k);
+//		Sleep(1 * 50);  //0.5s发送一次  
+//	}
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	thread task01(thread01);
+//	thread task02(thread02);
+//	task01.detach();
+//	task02.detach();
+//	system("pause");
+//}
+
+int main()
+{
+	bool a;
+	//hTimer = CreateWaitableTimer(NULL, TRUE, "TestWaitableTimer");
+	//if (hTimer)
+	//{
+	//	printf("定时器开启\r\n");
+	//}
+	//liDueTime.QuadPart = -10000000;     //1s
+	//SetWaitableTimer(hTimer, &liDueTime, 0, NULL, NULL, 0);
+
+	//thread task03(thread03);
+	//task03.detach();
+
+	//system("pause");
+	return 0;
+}

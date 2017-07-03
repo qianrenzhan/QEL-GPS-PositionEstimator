@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\LocalPositionEstimator">
+      <UniqueIdentifier>{82b67610-ad83-4cb6-b715-eefd652e2797}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\LocalPositionEstimator">
+      <UniqueIdentifier>{4fce60a9-718b-4132-8df9-57317e42c13a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\LocalPositionEstimator\sensors">
+      <UniqueIdentifier>{a382ec2f-4f76-4706-bbd5-052ee387f2be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\matrix">
+      <UniqueIdentifier>{23750b4e-eb78-46a3-be9d-cf8fcd4ae4a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\mathlib">
+      <UniqueIdentifier>{70a94278-63e0-45b1-b22f-428ba34c912a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\mathlib\math">
+      <UniqueIdentifier>{69d5f7ad-a2c7-49df-a574-a88873687ecd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\mathlib">
+      <UniqueIdentifier>{082d0388-8284-4aef-beb7-dd8184593355}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\mathlib\math">
+      <UniqueIdentifier>{d5896b05-8bfe-4a04-b191-2e6e4c411590}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\mathlib\math\filter">
+      <UniqueIdentifier>{6a9dc4b3-5b2b-4fa7-919a-d4ea29ef4f34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\mathlib\math\filter">
+      <UniqueIdentifier>{1636353a-952f-4073-89b9-8296ecbb6cba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\geo">
+      <UniqueIdentifier>{70c9da53-26ad-40af-bc75-2e5427cd95fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\geo">
+      <UniqueIdentifier>{be043785-25c5-45c5-81f8-7d0b141e53a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\gyro">
+      <UniqueIdentifier>{611893b4-2351-4c0e-b0e3-de095796fa95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\gyro">
+      <UniqueIdentifier>{a010ce67-db28-4126-ae1e-6ef442aeaabd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LocalPositionEstimator\BlockLocalPositionEstimator.h">
+      <Filter>头文件\LocalPositionEstimator</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix\AxisAngle.hpp">
+      <Filter>头文件\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix\Dcm.hpp">
+      <Filter>头文件\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix\Euler.hpp">
+      <Filter>头文件\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix\filter.hpp">
+      <Filter>头文件\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix\helper_functions.hpp">
+      <Filter>头文件\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix\integration.hpp">
+      <Filter>头文件\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix\math.hpp">
+      <Filter>头文件\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix\Matrix.hpp">
+      <Filter>头文件\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix\Quaternion.hpp">
+      <Filter>头文件\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix\Scalar.hpp">
+      <Filter>头文件\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix\SquareMatrix.hpp">
+      <Filter>头文件\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix\test_macros.hpp">
+      <Filter>头文件\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix\Vector.hpp">
+      <Filter>头文件\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix\Vector2.hpp">
+      <Filter>头文件\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix\Vector3.hpp">
+      <Filter>头文件\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="mathlib\mathlib.h">
+      <Filter>头文件\mathlib</Filter>
+    </ClInclude>
+    <ClInclude Include="mathlib\math\Expo.hpp">
+      <Filter>头文件\mathlib\math</Filter>
+    </ClInclude>
+    <ClInclude Include="mathlib\math\Limits.hpp">
+      <Filter>头文件\mathlib\math</Filter>
+    </ClInclude>
+    <ClInclude Include="mathlib\math\Matrix.hpp">
+      <Filter>头文件\mathlib\math</Filter>
+    </ClInclude>
+    <ClInclude Include="mathlib\math\matrix_alg.h">
+      <Filter>头文件\mathlib\math</Filter>
+    </ClInclude>
+    <ClInclude Include="mathlib\math\Quaternion.hpp">
+      <Filter>头文件\mathlib\math</Filter>
+    </ClInclude>
+    <ClInclude Include="mathlib\math\Vector.hpp">
+      <Filter>头文件\mathlib\math</Filter>
+    </ClInclude>
+    <ClInclude Include="mathlib\math\filter\LowPassFilter2p.hpp">
+      <Filter>头文件\mathlib\math\filter</Filter>
+    </ClInclude>
+    <ClInclude Include="geo\geo.h">
+      <Filter>头文件\geo</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gyro\Com.h">
+      <Filter>头文件\gyro</Filter>
+    </ClInclude>
+    <ClInclude Include="gyro\JY901.h">
+      <Filter>头文件\gyro</Filter>
+    </ClInclude>
+    <ClInclude Include="gyro\stdafx.h">
+      <Filter>头文件\gyro</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LocalPositionEstimator\BlockLocalPositionEstimator.cpp">
+      <Filter>源文件\LocalPositionEstimator</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalPositionEstimator\sensors\gps.cpp">
+      <Filter>源文件\LocalPositionEstimator\sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalPositionEstimator\sensors\baro.cpp">
+      <Filter>源文件\LocalPositionEstimator\sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mathlib\math\Limits.cpp">
+      <Filter>源文件\mathlib\math</Filter>
+    </ClCompile>
+    <ClCompile Include="mathlib\math\matrix_alg.cpp">
+      <Filter>源文件\mathlib\math</Filter>
+    </ClCompile>
+    <ClCompile Include="mathlib\math\filter\LowPassFilter2p.cpp">
+      <Filter>源文件\mathlib\math\filter</Filter>
+    </ClCompile>
+    <ClCompile Include="geo\geo.cpp">
+      <Filter>源文件\geo</Filter>
+    </ClCompile>
+    <ClCompile Include="gyro\Com.cpp">
+      <Filter>源文件\gyro</Filter>
+    </ClCompile>
+    <ClCompile Include="gyro\JY901.cpp">
+      <Filter>源文件\gyro</Filter>
+    </ClCompile>
+    <ClCompile Include="gyro\stdafx.cpp">
+      <Filter>源文件\gyro</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="example.txt">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>
